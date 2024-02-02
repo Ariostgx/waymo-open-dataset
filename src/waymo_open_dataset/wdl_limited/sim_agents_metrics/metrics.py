@@ -20,6 +20,8 @@ from google.protobuf import text_format
 import numpy as np
 import tensorflow as tf
 
+print('WARNING: waymo_open_dataset.wdl_limited.sim_agents_metrics using our own version to deal with numpy() issue')
+
 # copybara removed file resource import
 
 from waymo_open_dataset.protos import scenario_pb2

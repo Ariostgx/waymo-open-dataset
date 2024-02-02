@@ -21,6 +21,8 @@ from waymo_open_dataset.protos import sim_agents_submission_pb2
 from waymo_open_dataset.utils import trajectory_utils
 from waymo_open_dataset.utils.sim_agents import submission_specs
 
+print('WARNING: waymo_open_dataset.utils.sim_agents.converters using our own version to deal with numpy() issue')
+
 
 def scenario_to_joint_scene(
     scenario: scenario_pb2.Scenario) -> sim_agents_submission_pb2.JointScene:
