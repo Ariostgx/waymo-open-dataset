@@ -62,11 +62,11 @@ def scenario_to_joint_scene(
   simulated_trajectories = []
   for idx in range(trajectories.object_id.shape[0]):
     simulated_trajectories.append(sim_agents_submission_pb2.SimulatedTrajectory(
-        center_x=trajectories.x[idx],
-        center_y=trajectories.y[idx],
-        center_z=trajectories.z[idx],
-        heading=trajectories.heading[idx],
-        object_id=trajectories.object_id[idx],
+        center_x=trajectories.x[idx].numpy(),
+        center_y=trajectories.y[idx].numpy(),
+        center_z=trajectories.z[idx].numpy(),
+        heading=trajectories.heading[idx].numpy(),
+        object_id=trajectories.object_id[idx].numpy(),
     ))
   return sim_agents_submission_pb2.JointScene(
       simulated_trajectories=simulated_trajectories)

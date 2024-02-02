@@ -214,8 +214,8 @@ def compute_scenario_metrics_for_bundle(
   return sim_agents_metrics_pb2.SimAgentMetrics(
       scenario_id=scenario.scenario_id,
       metametric=metametric,
-      average_displacement_error=average_displacement_error,
-      min_average_displacement_error=min_average_displacement_error,
+      average_displacement_error=average_displacement_error.numpy(),
+      min_average_displacement_error=min_average_displacement_error.numpy(),
       **likelihood_metrics
   )
 
